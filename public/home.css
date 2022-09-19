@@ -1,0 +1,356 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url("BGsss.png");
+  background-size: 100vw 100vh;
+  }
+.navbar{
+  height: 70px;
+  width: 100%;
+  padding: 14px 30px;
+  /* background-color: #1b4cd3; */
+  position: relative;
+}
+.navbar .nav-header{
+  display: inline;
+}
+.navbar .nav-header .nav-logo{
+  display: inline-block;
+  margin-top: -7px;
+}
+.navbar .nav-links{
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+ 
+.navbar .nav-links .loginBtn{
+  background-color: transparent;
+  display: inline-block;
+  border: 3px solid #FF0606;
+  border-radius: 10px; 
+  padding: 5px 15px;
+  margin-left: 20px;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+}
+.navbar .nav-links a{
+  padding: 10px 12px;
+  text-decoration: none;
+  font-weight: 550;
+  color: white;
+}
+/* Hover effects */
+.navbar .nav-links a:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+ 
+/* responsive navbar toggle button */
+.navbar #nav-check, .navbar .nav-btn{
+  display: none;
+}
+ 
+@media (max-width:700px) {
+  .navbar .nav-btn{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .navbar .nav-btn label {
+    display: inline-block;
+    width: 80px;
+    height: 70px;
+    padding: 25px;
+  }
+  .navbar .nav-btn label span {
+    display: block;
+    height: 10px;
+    width: 25px;
+    border-top: 3px solid #eee;
+  }
+  .navbar .nav-btn label:hover, .navbar #nav-check:checked ~ .nav-btn label {
+    background-color: rgb(9, 14, 90);
+  }
+  .navbar .nav-links{
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 50%;
+    background-color: rgb(9, 14, 90);
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    right: 0px;
+  }
+  .navbar .nav-links a {
+    display: block;
+  }
+ 
+  /* when nav toggle button not checked */
+  .navbar #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+ 
+  /* when nav toggle button is checked */
+  .navbar #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  .navbar .nav-links .loginBtn {
+    padding: 10px 40px ;
+    margin: 20px;
+    font-size:  18px;
+    font-weight: bold;
+    color: rgb(9, 14, 90);
+  }
+   
+ 
+}
+
+
+.column1 {   
+    float: left;
+    margin: 13vw;
+    margin-top: 9rem;
+    width: 33%;
+    padding: 17px;
+    padding-top: 20px;
+    font-size: 19px;
+    text-align: justify;
+  }
+
+  .column2{
+    margin-top: -30px;
+    float: left;
+    width: 30%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column1 {
+      width: 100%;
+    }
+    .column2{
+        width: 100%;
+    }
+  }
+
+  .earth{
+    height: 575px;
+    width: 442px;
+  }
+
+  .register{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+  .register_text{
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      font-weight: bolder;
+      transform: translate(-50%, -50%);
+  }
+
+  .container{
+    position: relative;
+    text-align: center;
+  }
+
+  .whattosee{
+    text-align: center;
+    color: #ffff;
+  }
+  @media (min-width: 768px) {
+    .carousel-inner {
+      display: flex;
+    }
+    .carousel-item {
+      margin-right: 0;
+      flex: 0 0 33.333333%;
+      display: block;
+    }
+  }
+
+  .carousel-inner{
+    padding: 1em;
+}
+.card{
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+}
+.carousel-control-prev, .carousel-control-next{
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*xxx*/
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.teletext{
+  display: flex;
+  align-items: center;
+}
+.texttele{
+  color: white;
+  flex: 5;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-size: 18px;
+  /* background-color: red; */
+}
+.pictele{
+  color: white;
+  flex: 5;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  /* background-color: blue; */
+}
+.teleTitle{
+  margin-left: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  color: white;
+
+  opacity: 0.5;
+}
+.aboutText{
+  padding: 10px;
+  line-height: 40px;
+  font-size: 18px;
+
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  /* background-color: white; */
+}
+.footerIcon{
+  margin: 10px;
+  color: white;
+}
